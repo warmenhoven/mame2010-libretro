@@ -44,7 +44,7 @@ _mul_32x32(int32_t a, int32_t b)
 		: [result] "=A" (result)	/* result in edx:eax */
 		: [a]      "%a"  (a)		/* 'a' should also be in eax on entry */
 		, [b]      "rm"  (b)		/* 'b' can be memory or register */
-		: "%cc"						/* Clobbers condition codes */
+		: "cc" 						/* Clobbers condition codes */
 	);
 
 	return result;
@@ -70,7 +70,7 @@ _mulu_32x32(uint32_t a, uint32_t b)
 		: [result] "=A" (result)	/* result in edx:eax */
 		: [a]      "%a"  (a)		/* 'a' should also be in eax on entry */
 		, [b]      "rm"  (b)		/* 'b' can be memory or register */
-		: "%cc"						/* Clobbers condition codes */
+		: "cc" 						/* Clobbers condition codes */
 	);
 
 	return result;

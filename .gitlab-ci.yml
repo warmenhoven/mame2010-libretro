@@ -184,6 +184,12 @@ android-x86_64:
     - .libretro-android-jni-x86_64
     - .core-defs
 
+# Android 32-bit x86
+android-x86:
+  extends:
+    - .libretro-android-jni-x86
+    - .core-defs
+
 # iOS
 libretro-build-ios-arm64:
   extends:
